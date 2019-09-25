@@ -43,7 +43,11 @@ def add_problem(title="HWX-X"):
     pid =  json.loads(rsp.content)['msg']['id']
     add_executes(pid)
 
-if len(sys.argv) >= 2:
-    add_problem(sys.argv[1])
-else:
-    add_problem()
+def main():
+    if len(sys.argv) >= 2:
+        add_problem(sys.argv[1])
+    else:
+        add_problem()
+
+if __name__ == '__main__':
+    main()

@@ -10,5 +10,9 @@ def rm_problem(tid):
     rsp = requests.session().delete('https://api.oj.nctu.me/problems/'+str(tid)+'/', data=parm, cookies=COOKIES)
     print( tid, rsp )
 
-if len(sys.argv) >= 2:
-    rm_problem(int(sys.argv[1]))
+def main():
+    if len(sys.argv) >= 2:
+        rm_problem(int(sys.argv[1]))
+
+if __name__ == '__main__':
+    main()
