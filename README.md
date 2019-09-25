@@ -9,3 +9,8 @@ python3 add_problem.py <problem-title>
 ```
 python3 rm_problem.py <problem-id>
 ```
+
+### upload_testcase
+```
+python3 upload_testcase.py <problem-id> <file_testcase.in> <file_testcase.ans>
+```
