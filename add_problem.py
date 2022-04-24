@@ -12,7 +12,7 @@ def add_execute(pid, name='New Execute /', language_id=1, execute = '{}', filena
         'execute' : execute,
         'filename' : filename
     }
-    url = 'https://api.oj.nctu.me/executes/'
+    url = 'https://api.oj.nctu.edu.tw/executes/'
     rsp = requests.session().post(url, data=parm, cookies=COOKIES)
     print( pid, json.loads(rsp.content) )
     return json.loads(rsp.content)['msg']['id']
@@ -38,7 +38,7 @@ def add_problem(title="HWX-X"):
         'hint': '',
         'source': ''
     }
-    rsp = requests.session().post('https://api.oj.nctu.me/problems/', data=parm, cookies=COOKIES)
+    rsp = requests.session().post('https://api.oj.nctu.edu.tw/problems/', data=parm, cookies=COOKIES)
     print(rsp)
     pid =  json.loads(rsp.content)['msg']['id']
     add_executes(pid)

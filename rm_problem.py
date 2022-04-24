@@ -7,7 +7,7 @@ def rm_problem(tid):
     parm={
         'problemId': tid
     }
-    rsp = requests.session().delete('https://api.oj.nctu.me/problems/'+str(tid)+'/', data=parm, cookies=COOKIES)
+    rsp = requests.session().delete('https://api.oj.nctu.edu.tw/problems/'+str(tid)+'/', data=parm, cookies=COOKIES)
     print( tid, rsp )
 
 def main():
