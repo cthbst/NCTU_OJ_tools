@@ -13,7 +13,7 @@ def add():
         'output_limit': (None, '262144'),
         'score': (None, '100')
     }
-    rsp=s.post('https://api.oj.nctu.me/testdata/', files=parm, cookies=COOKIES)
+    rsp=s.post('https://api.oj.nctu.edu.tw/testdata/', files=parm, cookies=COOKIES)
     return json.loads(rsp.content)['msg']['id']
 
 def upload(tid, inp, out, tim, mem, sample):
@@ -27,7 +27,7 @@ def upload(tid, inp, out, tim, mem, sample):
         'input': open(inp),
         'output': open(out)
     }
-    rsp=s.put('https://api.oj.nctu.me/testdata/{}/'.format(tid), files=parm, cookies=COOKIES)
+    rsp=s.put('https://api.oj.nctu.edu.tw/testdata/{}/'.format(tid), files=parm, cookies=COOKIES)
     print(json.loads(rsp.content)['msg'])
 
 def main():
